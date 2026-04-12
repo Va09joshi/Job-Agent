@@ -2,7 +2,7 @@ name: AI Job Agent
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,25 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 🔹 1. Checkout repo
+      # 1. Checkout
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # 🔹 2. Setup Node
+      # 2. Use Node 20 (FIX)
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
 
-      # 🔹 3. Clean install (better than npm install)
+      # 3. Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 🔹 4. Run your AI agent
+      # 4. Run agent
       - name: Run Job Agent
         run: node src/index.js
         env:
-          NODE_ENV: production   # 🔥 IMPORTANT (fix dotenv issue)
+          NODE_ENV: production
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           EMAIL: ${{ secrets.EMAIL }}
           APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
