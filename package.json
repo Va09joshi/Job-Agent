@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Va09joshi/Job-Agent/issues"
   },
-  "homepage": "https://github.com/Va09joshi/Job-Agent#readme"
+  "homepage": "https://github.com/Va09joshi/Job-Agent#readme",
+  "dependencies": {
+    "dotenv": "^17.4.1"
+  }
 }
