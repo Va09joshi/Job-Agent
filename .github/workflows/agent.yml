@@ -10,20 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 🔹 1. Checkout repo
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # 🔹 2. Setup Node
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "18"
 
+      # 🔹 3. Clean install (better than npm install)
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Run Agent
+      # 🔹 4. Run your AI agent
+      - name: Run Job Agent
         run: node src/index.js
         env:
+          NODE_ENV: production   # 🔥 IMPORTANT (fix dotenv issue)
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           EMAIL: ${{ secrets.EMAIL }}
           APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
