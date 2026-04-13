@@ -22,6 +22,53 @@
 
 ---
 
+## 📋 Try It Now — Sign Up via Google Form
+
+<p align="center">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtbyXCgePuesPLpny7LHEbvIXGJKoeE1RMQs2Mqv8nmLsVmA/viewform" target="_blank">
+    <img src="https://img.shields.io/badge/%F0%9F%9A%80%20Register%20Now-Fill%20the%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Sign Up Form"/>
+  </a>
+</p>
+
+> **No setup needed.** Just fill in your profile — the agent does the rest.  
+> Once you submit, your details are saved to the Google Sheet and you'll start receiving personalised AI-matched job emails automatically.
+
+### 📝 What the form asks
+
+| # | Field | Example |
+|---|-------|---------|
+| 1 | **Full Name** | Vaibhav Joshi |
+| 2 | **Email Address** | you@gmail.com |
+| 3 | **Professional Background** | B.Tech CSE, 3 years in web dev |
+| 4 | **Primary Role** | Full Stack Developer |
+| 5 | **Secondary Role** *(optional)* | Backend Developer |
+| 6 | **Years of Experience** | 3 years |
+| 7 | **Skills** | React, Node.js, MongoDB, AWS |
+| 8 | **Key Strengths** | Problem-solving, system design |
+| 9 | **Location Type** | Remote / Hybrid / On-site |
+| 10 | **Preferred Location** | Pune, India |
+| 11 | **Job Type** | Full-time |
+| 12 | **Preferred Industry** | FinTech / SaaS |
+| 13 | **Expected Salary** | ₹12 LPA |
+
+### ✅ What happens after you submit
+
+```
+You fill the form
+      ↓
+Your profile is saved in Google Sheets automatically
+      ↓
+AI Job Agent runs → fetches jobs tailored to your role
+      ↓
+LLaMA 3.1 scores & ranks the best matches for you
+      ↓
+📧 You receive a rich HTML email with your Top 5 job matches
+```
+
+> 💡 **Tip:** The more specific your skills and role, the better the AI matching accuracy.
+
+---
+
 ## ✨ Features
 
 | Feature | Details |
