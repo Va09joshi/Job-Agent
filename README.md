@@ -1,24 +1,38 @@
-# 🚀 AI Job Agent
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&text=AI%20Job%20Agent&fontAlign=50&fontAlignY=40&color=0:4f46e5,100:22c55e&fontColor=ffffff&animation=fadeIn" alt="AI Job Agent Banner" />
+</p>
 
-An automated AI-powered job matching system that:
-- reads candidate preferences from Google Sheets,
-- fetches jobs from Indeed + Naukri,
-- ranks jobs with AI,
-- emails personalized top matches.
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=1000&color=22C55E&center=true&vCenter=true&width=750&lines=AI-Powered+Job+Matching+System;Automated+Job+Discovery+%26+Ranking;Google+Sheets+%E2%86%92+AI+%E2%86%92+Email+Pipeline;Built+for+Smart+Job+Seekers" alt="Typing Intro" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Automation-GitHub%20Actions-black?style=for-the-badge&logo=githubactions" alt="Automation Badge" />
+  <img src="https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=node.js" alt="Node.js Badge" />
+  <img src="https://img.shields.io/badge/AI-Groq%20API-green?style=for-the-badge" alt="Groq Badge" />
+  <img src="https://img.shields.io/badge/Data-Google%20Sheets-34A853?style=for-the-badge&logo=google" alt="Google Sheets Badge" />
+</p>
+
+---
+
+## 🚀 Overview
+
+**AI Job Agent** is a fully automated, AI-powered job matching system.  
+It reads candidate preferences from Google Sheets, fetches jobs from multiple sources, ranks opportunities using AI, and sends personalized recommendations by email.
 
 ---
 
 ## ✨ Highlights
 
-- ✅ Automated every 5 minutes via GitHub Actions
-- ✅ Multi-source job fetching (Indeed RSS + Naukri scrape + fallback)
-- ✅ AI-based relevance scoring and ranking
-- ✅ Personalized HTML email delivery
-- ✅ Google Form → Google Sheet → Job alerts pipeline
+- ⚡ Automated every 5 minutes via GitHub Actions
+- 🌐 Multi-source job fetching (Indeed + Naukri + fallback)
+- 🧠 AI-powered relevance scoring and ranking
+- 📩 Personalized HTML email delivery
+- 🔄 Google Form → Google Sheet → AI → Email pipeline
 
 ---
 
-## 🤖 AI-Generated Agent Workflow Image
+## 🤖 AI Agent Workflow
 
 ```mermaid
 flowchart TD
@@ -32,54 +46,64 @@ flowchart TD
     H --> I[User Receives Job Suggestions]
 ```
 
+### 🎥 Workflow Preview
+
+<p>
+  <img src="https://media.giphy.com/media/coxQHKASG60HrHtvkt/giphy.gif" alt="Workflow Preview GIF" />
+</p>
+
 ---
 
 ## 🧩 Project Structure
 
 ```text
-/home/runner/work/Job-Agent/Job-Agent
+Job-Agent/
 ├── .github/workflows/agent.yml
-├── src/index.js
-├── src/services/
-│   ├── sheet.service.js
-│   ├── jobs.service.js
-│   ├── ai.service.js
-│   └── mail.service.js
-└── src/utils/naukri.js
+├── src/
+│   ├── index.js
+│   ├── services/
+│   │   ├── sheet.service.js
+│   │   ├── jobs.service.js
+│   │   ├── ai.service.js
+│   │   └── mail.service.js
+│   └── utils/
+│       └── naukri.js
+├── package.json
+└── README.md
 ```
 
 ---
 
-## ⚙️ Setup
+## ⚙️ Setup Guide
 
-### 1) Install dependencies
+### 1) Install Dependencies
 
 ```bash
 npm ci
 ```
 
-### 2) Add environment variables
+### 2) Add Environment Variables
 
-Create a `.env` file in the project root:
+Create a `.env` file in project root:
 
 ```env
 GROQ_API_KEY=your_groq_key
-EMAIL=your_gmail_address
+EMAIL=your_email
 APP_PASSWORD=your_gmail_app_password
 SHEET_ID=your_google_sheet_id
 ```
 
-### 3) Add Google credentials
+### 3) Add Google Credentials
 
-Place your Google service account file as:
+Place your service account key file at:
 
 ```text
 credentials.json
 ```
 
-It must have Sheets read access to your target spreadsheet.
+Make sure this service account has access to your target Google Sheet.
 
-### 4) Run locally
+### 4) Run Locally
 
 ```bash
 node src/index.js
@@ -87,41 +111,22 @@ node src/index.js
 
 ---
 
-## 🧪 Google Form Testing (Use This Link)
+## 🧪 Testing Flow
 
-Form URL:
-
-https://docs.google.com/forms/d/e/1FAIpQLSdtbyXCgePuesPLpny7LHEbvIXGJKoeE1RMQs2Mqv8nmLsVmA/viewform
-
-> ✅ This link is documented as a **test/demo form** for validation flow.
-> For production usage, replace this with your own restricted/private form.
-
-### Test flow
-
-1. Fill and submit the form with a valid email and role/preferences.
-2. Confirm a new row appears in the Google Sheet tab named `job`.
-3. Trigger the workflow manually (or wait for the 5-minute schedule).
-4. Verify the submitted email receives the AI job match email.
-
-### Expected result
-
-- Form response is stored in Sheet (open-ended range `job!A2:Z`, i.e., all rows from row 2 onward).
-- Agent fetches jobs, runs AI matching, and sends top matches by email.
+1. Submit the Google Form.
+2. Verify the response appears in the `job` sheet tab.
+3. Trigger GitHub Action manually (or wait for scheduler).
+4. Confirm the user receives AI-generated job recommendations via email.
 
 ---
 
-## 🔄 GitHub Actions Automation
+## 🔄 Automation (GitHub Actions)
 
-Workflow file:
+- ⏱ Runs every 5 minutes
+- 🖱 Manual trigger supported (`workflow_dispatch`)
+- 🔐 Uses repository secrets
 
-- `.github/workflows/agent.yml`
-
-Triggers:
-
-- `schedule`: every 5 minutes
-- `workflow_dispatch`: manual run from GitHub Actions tab
-
-Required GitHub Secrets:
+### Required Secrets
 
 - `GROQ_API_KEY`
 - `EMAIL`
@@ -132,14 +137,29 @@ Required GitHub Secrets:
 
 ## 🛠 Troubleshooting
 
-- **No users found** → verify form responses are reaching the `job` sheet.
-- **No job email received** → verify `EMAIL` / `APP_PASSWORD` and spam folder.
-- **AI errors** → verify `GROQ_API_KEY` is valid.
-- **Sheet read error** → verify `credentials.json` and sheet permissions.
+| Issue | Solution |
+|---|---|
+| No users found | Check Google Sheet data and tab name (`job`) |
+| No email received | Verify SMTP credentials and spam folder |
+| AI errors | Validate `GROQ_API_KEY` |
+| Sheet error | Check `credentials.json` and sharing permissions |
 
 ---
 
-## 📌 Notes
+## 🎯 Key Benefits
 
-- Current `npm test` script is a placeholder and exits with failure by default.
-- The core runtime command is `node src/index.js`.
+- 🚀 Eliminates manual job searching
+- 🎯 Delivers more relevant job matches
+- 🔄 Supports real-time automated processing
+- 📩 Sends clean, professional recommendation emails
+
+---
+
+## 👨‍💻 Author
+
+**Vaibhav Joshi**  
+🔗 https://github.com/Va09joshi
+
+<p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=120&color=0:22c55e,100:4f46e5" alt="Footer Banner" />
+</p>
