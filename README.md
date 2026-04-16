@@ -93,6 +93,8 @@ Form URL:
 
 https://docs.google.com/forms/d/e/1FAIpQLSdtbyXCgePuesPLpny7LHEbvIXGJKoeE1RMQs2Mqv8nmLsVmA/viewform
 
+> ⚠️ If this is a production form, enable domain restriction or share it only with intended users to avoid spam submissions.
+
 ### Test flow
 
 1. Fill and submit the form with a valid email and role/preferences.
@@ -102,7 +104,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSdtbyXCgePuesPLpny7LHEbvIXGJKoeE1RMQs2M
 
 ### Expected result
 
-- Form response is stored in Sheet (`job!A2:Z` consumption range).
+- Form response is stored in Sheet (open-ended range `job!A2:Z`, i.e., all rows from row 2 onward).
 - Agent fetches jobs, runs AI matching, and sends top matches by email.
 
 ---
