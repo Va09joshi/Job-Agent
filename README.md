@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=230&text=AI%20Job%20Agent&fontAlign=50&fontAlignY=40&color=0:4f46e5,100:22c55e&fontColor=ffffff&animation=fadeIn" alt="AI Job Agent Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=260&text=AI%20Job%20Agent&fontAlign=50&fontSize=52&color=0:111827,100:1f2937&fontColor=ffffff&animation=fadeIn&width=1000" />
 </p>
 
 <p align="center">
@@ -48,8 +48,8 @@ flowchart TD
 
 ### 🎥 Workflow Preview
 
-<p>
-  <img src="https://media.giphy.com/media/coxQHKASG60HrHtvkt/giphy.gif" alt="Workflow Preview GIF" />
+<p align="center">
+  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="AI Automation Workflow" width="450"/>
 </p>
 
 ---
@@ -160,6 +160,6 @@ node src/index.js
 **Vaibhav Joshi**  
 🔗 https://github.com/Va09joshi
 
-<p>
-  <img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=120&color=0:22c55e,100:4f46e5" alt="Footer Banner" />
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&section=footer&height=160&text=Thanks%20for%20Visiting%20🚀&fontAlign=50&fontSize=28&color=0:111827,100:1f2937&fontColor=ffffff&animation=fadeIn" />
 </p>
