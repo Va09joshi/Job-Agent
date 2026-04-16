@@ -93,7 +93,8 @@ Form URL:
 
 https://docs.google.com/forms/d/e/1FAIpQLSdtbyXCgePuesPLpny7LHEbvIXGJKoeE1RMQs2Mqv8nmLsVmA/viewform
 
-> ⚠️ If this is a production form, enable domain restriction or share it only with intended users to avoid spam submissions.
+> ✅ This link is documented as a **test/demo form** for validation flow.
+> For production usage, replace this with your own restricted/private form.
 
 ### Test flow
 
